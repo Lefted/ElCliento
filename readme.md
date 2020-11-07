@@ -10,10 +10,6 @@ Coming soon
 
 Put the  jar in your mods folder.
 
-```bash
-pip install foobar
-```
-
 ## Usage
 
 Open the Gui by pressing RSHIFT.
