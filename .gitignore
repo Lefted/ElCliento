@@ -1,0 +1,46 @@
+# eclipse
+eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+#gradle
+.gradle/
+build/
+out/
+classes/
+
+# Files from Forge MDK
+forge*changelog.txt
+
+# windows
+Thumbs.db
+[Dd]esktop.ini
+*.lnk
+
+# linux
+*~
+.Trash-*
+.nfs*
+.fuse_hidden*
+.directory
+
+# mac
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.AppleDB
+.AppleDesktop
+.apdisk
+/run/

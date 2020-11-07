@@ -1,0 +1,10 @@
+{
+  "package": "us.hemdgang.elcliento.mixins",
+  "required" : true,
+  "refmap": "mixins.elcliento.refmap.json",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinGuiMainMenu"
+  ],
+  "minVersion": "0.6"
+}

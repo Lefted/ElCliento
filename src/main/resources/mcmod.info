@@ -1,0 +1,14 @@
+[
+{
+  "modid": "elcliento",
+  "name": "ElCliento",
+  "description": "It just works.",
+  "mcversion": "${mcversion}",
+  "url": "https://github.com/Lefted/ElCliento",
+  "updateUrl": "",
+  "authorList": ["Lefted", "Pr3roxDLC", "16underscore"],
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
