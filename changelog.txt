@@ -8,3 +8,4 @@ uncommon todos:
 b1: -initial commit
     -basic module system
     -chatlogger
+    -fullbright
