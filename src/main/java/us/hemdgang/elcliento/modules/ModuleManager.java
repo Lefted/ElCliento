@@ -3,7 +3,10 @@ package us.hemdgang.elcliento.modules;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import us.hemdgang.elcliento.ElCliento;
+import us.hemdgang.elcliento.events.KeyPressedEvent;
 
 public class ModuleManager {
 
@@ -61,17 +64,17 @@ public class ModuleManager {
     private class KeybindListener {
 
 	public KeybindListener() {
-	    // EventManager.register(this);
+	    MinecraftForge.EVENT_BUS.register(this);
 	}
 
-	// @EventTarget
-	// public void onKeyPress(KeyPressEvent event) {
-	// for (Module module : modules) {
-	// if (module.getKeycode() == event.getKey()) {
-	// module.toggle();
-	// }
-	// }
-	// }
+	@SubscribeEvent
+	public void onKeyInputEvent(KeyPressedEvent event) {
+	    for (Module module : modules) {
+		if (module.getKeycode() == event.getKey()) {
+		    module.toggle();
+		}
+	    }
+	}
     }
 
     private class RenderArrayList {

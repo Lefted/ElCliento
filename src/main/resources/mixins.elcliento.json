@@ -4,7 +4,8 @@
   "refmap": "mixins.elcliento.refmap.json",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "MixinGuiMainMenu"
+    "MixinGuiMainMenu",
+    "MixinMinecraft"
   ],
   "minVersion": "0.6"
 }

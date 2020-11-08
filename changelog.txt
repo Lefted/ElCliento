@@ -1,6 +1,7 @@
 uncommon todos: 
     -motionblur
     -option to change prefix
+    -delete narrator keybind
 
 b1: -initial commit
     -basic module system
