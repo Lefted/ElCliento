@@ -48,6 +48,10 @@ public abstract class Module {
 	// }
     }
 
+    public boolean isEnabled() {
+	return this.enabled;
+    }
+
     public Category getCategory() {
 	return category;
     }

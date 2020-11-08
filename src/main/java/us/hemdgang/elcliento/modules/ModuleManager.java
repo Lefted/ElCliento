@@ -7,6 +7,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import us.hemdgang.elcliento.ElCliento;
 import us.hemdgang.elcliento.events.KeyPressedEvent;
+import us.hemdgang.modules.Fullbright;
 
 public class ModuleManager {
 
@@ -27,6 +28,7 @@ public class ModuleManager {
 	// registering modules goes here
 	// e.g. this.registerModule(new Killaura());
 	// ##############################
+	this.registerModule(new Fullbright());
     }
 
     private void registerModule(Module module) {
