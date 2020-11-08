@@ -1,0 +1,6 @@
+uncommon todos: 
+    -motionblur
+    -option to change prefix
+
+b1: -initial commit
+    -basic module system
