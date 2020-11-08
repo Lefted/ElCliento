@@ -18,16 +18,16 @@ public class ToggleCommand extends Command {
 	    final Module module = ModuleManager.getModuleByName(strings[1]);
 
 	    if (module == null) {
-		ChatLogger.INSTANCE.log("§c§lError: §r§aThe entered module does not exist.");
+		ChatLogger.INSTANCE.log("\u00A7c\u00A7lError: \u00A7r\u00A7aThe entered module does not exist.");
 		return;
 	    }
 
 	    module.setEnabled(!module.isEnabled());
-	    ChatLogger.INSTANCE.log("§cToggled module.");
+	    ChatLogger.INSTANCE.log(" \u00A7cToggled module.");
 	    return;
 	}
 
-	ChatLogger.INSTANCE.log("§c§lSyntax: §r§a.toggle <module>");
+	ChatLogger.INSTANCE.log("\u00A7c\u00A7lSyntax: \u00A7r\u00A7a.toggle <module>");
     }
 
 }
