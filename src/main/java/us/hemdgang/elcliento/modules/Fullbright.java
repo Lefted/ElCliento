@@ -1,4 +1,4 @@
-package us.hemdgang.modules;
+package us.hemdgang.elcliento.modules;
 
 import us.hemdgang.elcliento.modules.Category;
 import us.hemdgang.elcliento.modules.Module;

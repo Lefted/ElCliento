@@ -7,7 +7,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import us.hemdgang.elcliento.ElCliento;
 import us.hemdgang.elcliento.events.KeyPressedEvent;
-import us.hemdgang.modules.Fullbright;
 
 public class ModuleManager {
 
