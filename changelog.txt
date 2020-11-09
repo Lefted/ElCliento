@@ -1,6 +1,11 @@
 uncommon todos: 
     -motionblur
     -option to change prefix
+    -delete narrator keybind
+    -replace command keybind with # for baritone
+    -no chat background
 
 b1: -initial commit
     -basic module system
+    -chatlogger
+    -fullbright

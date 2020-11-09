@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import us.hemdgang.elcliento.commands.CommandManager;
 import us.hemdgang.elcliento.modules.ModuleManager;
 
 @Mod(modid = ElCliento.MODID, name = ElCliento.NAME, version = ElCliento.VERSION)
@@ -19,6 +20,7 @@ public class ElCliento {
     private static Logger logger;
 
     private ModuleManager moduleManager;
+    public CommandManager commandManager;
 
     // INSTANCE
     public static ElCliento instance;
@@ -26,6 +28,10 @@ public class ElCliento {
     // CONSTRUCTOR
     public ElCliento() {
 	this.moduleManager = new ModuleManager();
+	this.commandManager = new CommandManager();
+	
+	this.moduleManager.registerAllModules();
+	this.commandManager.registerCommands();
     }
 
     // METHODS

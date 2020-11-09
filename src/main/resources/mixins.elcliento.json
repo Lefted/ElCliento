@@ -5,7 +5,12 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "MixinGuiMainMenu",
+<<<<<<< HEAD
     "MixinMinecraft"
+=======
+    "MixinMinecraft",
+    "MixinGuiScreen"
+>>>>>>> refs/heads/feature_values
   ],
   "minVersion": "0.6"
 }

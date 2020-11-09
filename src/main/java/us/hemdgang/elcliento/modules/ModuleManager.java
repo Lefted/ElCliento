@@ -3,15 +3,23 @@ package us.hemdgang.elcliento.modules;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
 import org.lwjgl.input.Keyboard;
 
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.event.GuiScreenEvent.KeyboardInputEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
+=======
+import net.minecraftforge.common.MinecraftForge;
+>>>>>>> refs/heads/feature_values
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import us.hemdgang.elcliento.ElCliento;
 import us.hemdgang.elcliento.events.KeyPressedEvent;
+<<<<<<< HEAD
+=======
+import us.hemdgang.modules.Fullbright;
+>>>>>>> refs/heads/feature_values
 
 public class ModuleManager {
 
@@ -32,6 +40,7 @@ public class ModuleManager {
 	// registering modules goes here
 	// e.g. this.registerModule(new Killaura());
 	// ##############################
+	this.registerModule(new Fullbright());
     }
 
     private void registerModule(Module module) {

@@ -14,9 +14,17 @@ import us.hemdgang.elcliento.events.KeyPressedEvent;
 public abstract class MixinMinecraft {
 
     @Inject(method = "runTickKeyboard()V", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;dispatchKeypresses()V", shift = At.Shift.AFTER))
+<<<<<<< HEAD
     public void onKeyPressed(CallbackInfo ci) {
 	final int key = Keyboard.getEventKey() == 0 ? Keyboard.getEventCharacter() + 256 : Keyboard.getEventKey();
 	MinecraftForge.EVENT_BUS.post(new KeyPressedEvent(key));
     }
     
+=======
+    private void onKeyPressed(CallbackInfo callbackInfo) {
+	final int key = Keyboard.getEventKey() == 0 ? Keyboard.getEventCharacter() + 256 : Keyboard.getEventKey();
+	MinecraftForge.EVENT_BUS.post(new KeyPressedEvent(key));
+    }
+
+>>>>>>> refs/heads/feature_values
 }
