@@ -30,11 +30,6 @@ public class ElCliento {
     // INSTANCE
     public static ElCliento instance;
 
-//    // CONSTRUCTOR
-//    public ElCliento() {
-//	
-//    }
-    
     // METHODS
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
