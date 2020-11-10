@@ -9,3 +9,5 @@ b1: -initial commit
     -basic module system
     -chatlogger
     -fullbright
+    -values
+    -moduleconfig

@@ -2,12 +2,13 @@ package us.hemdgang.elcliento.modules;
 
 import us.hemdgang.elcliento.modules.Category;
 import us.hemdgang.elcliento.modules.Module;
+import us.hemdgang.values.Value;
 
 public class Fullbright extends Module {
 
     // ATTRIBUTES
     private float oldGamma;
-
+    
     // CONSTRUCTOR
     public Fullbright() {
 	super("Fullbright", Category.RENDER);

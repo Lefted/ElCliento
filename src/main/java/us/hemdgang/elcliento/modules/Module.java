@@ -1,7 +1,13 @@
 package us.hemdgang.elcliento.modules;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+
 import net.minecraft.client.Minecraft;
+import us.hemdgang.config.ModuleConfig;
 import us.hemdgang.elcliento.ElCliento;
+import us.hemdgang.values.Value;
 
 public abstract class Module {
 
@@ -43,9 +49,9 @@ public abstract class Module {
 	} else {
 	    this.onDisable();
 	}
-	// if (ModuleConfig.initDone) {
-	// ElCliento.instance.moduleConfig.saveModules();
-	// }
+	if (ModuleConfig.isInitDone()) {
+	    ElCliento.instance.moduleConfig.saveModules();
+	}
     }
 
     public boolean isEnabled() {
@@ -62,55 +68,61 @@ public abstract class Module {
 
     public void setKeycode(int keycode) {
 	this.keycode = keycode;
-	// if (ModuleConfig.initDone) {
-	// ElCliento.instance.moduleConfig.saveModules();
-	// }
+	if (ModuleConfig.isInitDone()) {
+	    ElCliento.instance.moduleConfig.saveModules();
+	}
     }
 
     public String getName() {
 	return name;
     }
 
+    public boolean isVisible() {
+	return this.visible;
+    }
+
+    public void setVisible(boolean visible) {
+	this.visible = visible;
+    }
+
     // TODO values
-    // public Value getValue(final String valueName) {
-    // for (final Field field : getClass().getDeclaredFields()) {
-    // try {
-    // field.setAccessible(true);
-    //
-    // final Object o = field.get(this);
-    //
-    // // System.out.println(field.getName());
-    //
-    // if (o instanceof Value) {
-    // final Value value = (Value) o;
-    //
-    // if (value.getValueName().equalsIgnoreCase(valueName))
-    // return value;
-    // }
-    // } catch (IllegalAccessException e) {
-    // e.printStackTrace();
-    // }
-    // }
-    //
-    // return null;
-    // }
-    //
-    // public List<Value> getValues() {
-    // final List<Value> values = new ArrayList<>();
-    //
-    // for (final Field field : getClass().getDeclaredFields()) {
-    // try {
-    // field.setAccessible(true);
-    //
-    // final Object o = field.get(this);
-    //
-    // if (o instanceof Value)
-    // values.add((Value) o);
-    // } catch (IllegalAccessException e) {
-    // e.printStackTrace();
-    // }
-    // }
-    //
-    // return values;
-    // }
+    public Value getValue(final String valueName) {
+	for (final Field field : getClass().getDeclaredFields()) {
+	    try {
+		field.setAccessible(true);
+
+		final Object o = field.get(this);
+
+		if (o instanceof Value) {
+		    final Value value = (Value) o;
+
+		    if (value.getValueName().equalsIgnoreCase(valueName))
+			return value;
+		}
+	    } catch (IllegalAccessException e) {
+		e.printStackTrace();
+	    }
+	}
+
+	return null;
+    }
+
+    public List<Value> getValues() {
+	final List<Value> values = new ArrayList<>();
+
+	for (final Field field : getClass().getDeclaredFields()) {
+	    try {
+		field.setAccessible(true);
+
+		final Object o = field.get(this);
+
+		if (o instanceof Value)
+		    values.add((Value) o);
+	    } catch (IllegalAccessException e) {
+		e.printStackTrace();
+	    }
+	}
+
+	return values;
+    }
 }
