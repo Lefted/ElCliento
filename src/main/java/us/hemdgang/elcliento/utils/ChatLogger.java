@@ -14,7 +14,8 @@ public class ChatLogger {
 
     // METHODS
     public void log(String msg) {
-	mc.ingameGUI.getChatGUI().printChatMessage(new TextComponentString(msg));
+	if (mc != null && mc.world != null)
+	    mc.ingameGUI.getChatGUI().printChatMessage(new TextComponentString(msg));
     }
 
 }
