@@ -12,9 +12,9 @@ public class CommandManager {
 
     // METHODS
     public void registerCommands() {
-	// registerCommand(new ValueCommand());
 	registerCommand(new BindCommand());
 	registerCommand(new ToggleCommand());
+	// registerCommand(new ValueCommand());
 	// registerCommand(new ConfigCommand());
 	// registerCommand(new FriendCommand());
     }
