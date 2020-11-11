@@ -12,8 +12,8 @@ public class CommandManager {
 
     // METHODS
     public void registerCommands() {
-	// registerCommand(new BindCommand());
 	// registerCommand(new ValueCommand());
+	registerCommand(new BindCommand());
 	registerCommand(new ToggleCommand());
 	// registerCommand(new ConfigCommand());
 	// registerCommand(new FriendCommand());
