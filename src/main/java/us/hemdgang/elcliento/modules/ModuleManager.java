@@ -69,10 +69,12 @@ public class ModuleManager {
 	}
 
 	@SubscribeEvent
-	public void onKeyInputEvent(KeyPressedEvent event) {
-	    for (Module module : modules) {
-		if (module.getKeycode() == event.getKey()) {
-		    module.toggle();
+	public void onKeyPressed(KeyPressedEvent event) {
+	    if (event.getEventKeyState()) {
+		for (Module module : modules) {
+		    if (module.getKeycode() == event.getKey()) {
+			module.toggle();
+		    }
 		}
 	    }
 	}
