@@ -2,6 +2,8 @@ package us.hemdgang.values;
 
 import java.util.function.Consumer;
 
+import us.hemdgang.elcliento.ElCliento;
+
 /**
  * Project: LiquidBase
  * -----------------------------------------------------------
@@ -33,8 +35,9 @@ public class Value<T> {
 
     public void setObject(T valueObject) {
 	this.valueObject = valueObject;
-	// TODO save module config
-	// UtilityMod.instance.moduleConfig.saveModules();
+	if (ElCliento.instance.moduleConfig.initDone) {
+	    ElCliento.instance.moduleConfig.saveModules();
+	}
 	if (this.consumer != null) {
 	    this.consumer.accept(this.valueObject);
 	}
