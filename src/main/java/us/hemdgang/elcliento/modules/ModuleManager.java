@@ -30,6 +30,8 @@ public class ModuleManager {
 	this.registerModule(new Fullbright());
 	this.registerModule(new Chams());
 	this.registerModule(new ESP());
+	this.registerModule(new NoRain());
+	this.registerModule(new Tracers());
     }
 
     private void registerModule(Module module) {
