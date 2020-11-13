@@ -4,11 +4,11 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
-public class NoRain extends Module {
+public class Sprint extends Module {
 
-    public NoRain(){
+    public Sprint(){
 
-        super("NoRain", Category.WORLD);
+        super("Sprint", Category.MOVEMENT);
 
     }
 
@@ -19,16 +19,15 @@ public class NoRain extends Module {
 
     @Override
     public void onDisable() {
-        MinecraftForge.EVENT_BUS.unregister(this);
+        MinecraftForge.EVENT_BUS.unregister( this);
     }
+
 
     @SubscribeEvent
-    public void onTick(TickEvent.ClientTickEvent e) {
-        if (mc.world != null) {
-            if (mc.world.isRaining()) mc.world.setRainStrength(0.0f);
-            if (mc.world.isThundering()) mc.world.setThunderStrength(0.0f);
+    public void onUpdate(final TickEvent.ClientTickEvent event) {
+        if (mc.player == null) return;
+        if (!mc.player.isSprinting()) {
+            mc.player.setSprinting(true);
         }
     }
-
-
 }

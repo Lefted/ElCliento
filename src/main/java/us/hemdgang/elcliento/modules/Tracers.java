@@ -18,7 +18,7 @@ public class Tracers extends Module {
 
     @Override
     public void onDisable() {
-MinecraftForge.EVENT_BUS.register(this);
+MinecraftForge.EVENT_BUS.unregister(this);
     }
 
     @SubscribeEvent

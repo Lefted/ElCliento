@@ -32,6 +32,7 @@ public class ModuleManager {
 	this.registerModule(new ESP());
 	this.registerModule(new NoRain());
 	this.registerModule(new Tracers());
+	this.registerModule(new Sprint());
     }
 
     private void registerModule(Module module) {
