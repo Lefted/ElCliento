@@ -9,18 +9,15 @@ import java.io.PrintWriter;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 
 import net.minecraft.client.Minecraft;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 import us.hemdgang.elcliento.ElCliento;
 import us.hemdgang.elcliento.modules.Module;
 import us.hemdgang.elcliento.modules.ModuleManager;
-import us.hemdgang.values.Value;
+import us.hemdgang.elcliento.values.Value;
 
 public class ModuleConfig {
 

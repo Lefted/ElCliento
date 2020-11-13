@@ -7,7 +7,7 @@ import java.util.List;
 import net.minecraft.client.Minecraft;
 import us.hemdgang.config.ModuleConfig;
 import us.hemdgang.elcliento.ElCliento;
-import us.hemdgang.values.Value;
+import us.hemdgang.elcliento.values.Value;
 
 public abstract class Module {
 

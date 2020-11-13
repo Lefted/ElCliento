@@ -1,10 +1,9 @@
 package us.hemdgang.elcliento.commands;
 
-import us.hemdgang.elcliento.ElCliento;
 import us.hemdgang.elcliento.modules.Module;
 import us.hemdgang.elcliento.modules.ModuleManager;
 import us.hemdgang.elcliento.utils.ChatLogger;
-import us.hemdgang.values.Value;
+import us.hemdgang.elcliento.values.Value;
 
 /**
  * Project: LiquidBase ----------------------------------------------------------- Copyright \u00A7 2017 | CCBlueX | All rights reserved.
