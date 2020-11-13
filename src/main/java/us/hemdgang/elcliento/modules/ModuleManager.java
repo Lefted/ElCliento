@@ -29,6 +29,7 @@ public class ModuleManager {
 	// ##############################
 	this.registerModule(new Fullbright());
 	this.registerModule(new Chams());
+	this.registerModule(new ESP());
     }
 
     private void registerModule(Module module) {

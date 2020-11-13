@@ -20,16 +20,16 @@ public class BindCommand extends Command {
 	    final Module module = ModuleManager.getModuleByName(strings[1]);
 
 	    if (module == null) {
-		ChatLogger.INSTANCE.log("§c§lError: §r§aThe entered module does not exist.");
+		ChatLogger.INSTANCE.log("\u00A7c\u00A7lError: \u00A7r\u00A7aThe entered module does not exist.");
 		return;
 	    }
 	    final int key = Keyboard.getKeyIndex(strings[2].toUpperCase());
 	    module.setKeycode(key);
 	    
-	    ChatLogger.INSTANCE.log("§cThe keybind of §a§l" + module.getName() + " §r§cwas set to §a§l" + Keyboard.getKeyName(key) + "§c.");
+	    ChatLogger.INSTANCE.log("\u00A7cThe keybind of \u00A7a\u00A7l" + module.getName() + " \u00A7r\u00A7cwas set to \u00A7a\u00A7l" + Keyboard.getKeyName(key) + "\u00A7c.");
 	    return;
 	}
 
-	ChatLogger.INSTANCE.log("§c§lSyntax: §r§a.bind <module> <key>");
+	ChatLogger.INSTANCE.log("\u00A7c\u00A7lSyntax: \u00A7r\u00A7a.bind <module> <key>");
     }
 }
