@@ -28,6 +28,7 @@ public class ModuleManager {
 	// e.g. this.registerModule(new Killaura());
 	// ##############################
 	this.registerModule(new Fullbright());
+	this.registerModule(new Chams());
     }
 
     private void registerModule(Module module) {
