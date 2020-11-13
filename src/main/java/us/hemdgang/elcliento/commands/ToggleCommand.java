@@ -23,7 +23,7 @@ public class ToggleCommand extends Command {
 	    }
 
 	    module.setEnabled(!module.isEnabled());
-	    ChatLogger.INSTANCE.log(" \u00A7cToggled module.");
+	    ChatLogger.INSTANCE.log(String.format("\u00A77Toggled %s: [%s\u00A77]", module.getName(), module.isEnabled() ? "\u00A7aON" : "\u00A7cOFF"));
 	    return;
 	}
 
