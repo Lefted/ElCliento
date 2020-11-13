@@ -11,3 +11,11 @@ b1: -initial commit
     -fullbright
     -values
     -moduleconfig
+    -tracers
+    -esp
+    -chams
+    -norain
+    -arraylist
+    -value command
+    -toggle command
+    -bind command
